@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TRU-B0-LML">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="LSS-Wr-d8P">
+            <objects>
+                <navigationController id="TRU-B0-LML" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vfl-fp-YhX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kxV-z6-cee"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P79-5P-Bll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="-766"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smb-zL-DR4">
+                                <rect key="frame" x="153" y="300.5" width="69" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="CdP-c3-RRy"/>
+                                </constraints>
+                                <state key="normal" title="NSThread"/>
+                                <connections>
+                                    <segue destination="nbE-zN-o3K" kind="show" id="pDU-s3-SfL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwy-hT-BBA">
+                                <rect key="frame" x="154.5" y="204.5" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="3ti-OD-Gk2"/>
+                                    <constraint firstAttribute="height" constant="66" id="Vpz-d1-4f3"/>
+                                </constraints>
+                                <state key="normal" title="GCD"/>
+                                <connections>
+                                    <segue destination="jzR-eW-2e9" kind="show" id="yhX-EG-GEx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9z-Cf-fgi">
+                                <rect key="frame" x="143" y="396.5" width="89" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="gDD-Xo-QJr"/>
+                                </constraints>
+                                <state key="normal" title="NSOperation"/>
+                                <connections>
+                                    <segue destination="fuE-du-SYQ" kind="show" id="buB-59-hCl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Q9z-Cf-fgi" firstAttribute="centerX" secondItem="smb-zL-DR4" secondAttribute="centerX" id="1mB-vz-mx4"/>
+                            <constraint firstItem="smb-zL-DR4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1vT-4f-6D4"/>
+                            <constraint firstItem="Kwy-hT-BBA" firstAttribute="centerX" secondItem="smb-zL-DR4" secondAttribute="centerX" id="Alx-u3-tQW"/>
+                            <constraint firstItem="smb-zL-DR4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HnS-sH-wn1"/>
+                            <constraint firstItem="Q9z-Cf-fgi" firstAttribute="top" secondItem="smb-zL-DR4" secondAttribute="bottom" constant="30" id="LgY-mr-AAl"/>
+                            <constraint firstItem="smb-zL-DR4" firstAttribute="top" secondItem="Kwy-hT-BBA" secondAttribute="bottom" constant="30" id="TCz-aL-S8o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zEb-FM-ZhK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1313" y="-897"/>
+        </scene>
+        <!--NSThreadVC-->
+        <scene sceneID="gPz-J0-C66">
+            <objects>
+                <viewController storyboardIdentifier="NSThreadVC" title="NSThreadVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nbE-zN-o3K" customClass="NSThreadVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iPF-5X-wfa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHm-Xt-Cyn">
+                                <rect key="frame" x="164.5" y="204.5" width="46" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="ybb-1E-q9U"/>
+                                </constraints>
+                                <state key="normal" title="方法一"/>
+                                <connections>
+                                    <action selector="method1:" destination="nbE-zN-o3K" eventType="touchUpInside" id="3Mw-T7-WRg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tH-U7-SFz">
+                                <rect key="frame" x="164.5" y="300.5" width="46" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="MH4-aD-oD2"/>
+                                </constraints>
+                                <state key="normal" title="方法二"/>
+                                <connections>
+                                    <action selector="method2:" destination="nbE-zN-o3K" eventType="touchUpInside" id="79G-yc-rHC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyp-3A-IR8">
+                                <rect key="frame" x="164.5" y="396.5" width="46" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="WWF-6Y-UXp"/>
+                                </constraints>
+                                <state key="normal" title="方法三"/>
+                                <connections>
+                                    <action selector="method3:" destination="nbE-zN-o3K" eventType="touchUpInside" id="PFY-FG-nnB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qyp-3A-IR8" firstAttribute="top" secondItem="1tH-U7-SFz" secondAttribute="bottom" constant="30" id="ARp-km-kLo"/>
+                            <constraint firstItem="1tH-U7-SFz" firstAttribute="top" secondItem="fHm-Xt-Cyn" secondAttribute="bottom" constant="30" id="KeB-4u-dYs"/>
+                            <constraint firstItem="1tH-U7-SFz" firstAttribute="centerY" secondItem="iPF-5X-wfa" secondAttribute="centerY" id="Weh-Mu-lDN"/>
+                            <constraint firstItem="qyp-3A-IR8" firstAttribute="centerX" secondItem="1tH-U7-SFz" secondAttribute="centerX" id="b0u-gz-CFi"/>
+                            <constraint firstItem="fHm-Xt-Cyn" firstAttribute="centerX" secondItem="1tH-U7-SFz" secondAttribute="centerX" id="bHJ-A7-M5T"/>
+                            <constraint firstItem="1tH-U7-SFz" firstAttribute="centerX" secondItem="iPF-5X-wfa" secondAttribute="centerX" id="bL2-CT-86O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JFq-hb-R09"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jef-2r-IDh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="665" y="27"/>
+        </scene>
+        <!--NSOperationVC-->
+        <scene sceneID="Bhi-GU-Hpf">
+            <objects>
+                <viewController storyboardIdentifier="NSOperationVC" title="NSOperationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fuE-du-SYQ" customClass="NSOperationVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="id7-dD-kRE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-GT-mV3">
+                                <rect key="frame" x="153" y="300.5" width="69" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="btx-ov-X6R"/>
+                                </constraints>
+                                <state key="normal" title="NSThread"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pud-up-avw">
+                                <rect key="frame" x="154.5" y="204.5" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Eg5-ay-l1a"/>
+                                    <constraint firstAttribute="width" constant="66" id="FFt-aV-zNV"/>
+                                </constraints>
+                                <state key="normal" title="GCD"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5r-Ll-1va">
+                                <rect key="frame" x="143" y="396.5" width="89" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="oAJ-fZ-PtY"/>
+                                </constraints>
+                                <state key="normal" title="NSOperation"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RJn-GT-mV3" firstAttribute="centerX" secondItem="id7-dD-kRE" secondAttribute="centerX" id="4xz-at-VJm"/>
+                            <constraint firstItem="RJn-GT-mV3" firstAttribute="centerY" secondItem="id7-dD-kRE" secondAttribute="centerY" id="IaU-Ru-9td"/>
+                            <constraint firstItem="RJn-GT-mV3" firstAttribute="top" secondItem="pud-up-avw" secondAttribute="bottom" constant="30" id="KEH-x6-xNc"/>
+                            <constraint firstItem="K5r-Ll-1va" firstAttribute="top" secondItem="RJn-GT-mV3" secondAttribute="bottom" constant="30" id="RrV-uZ-mnP"/>
+                            <constraint firstItem="K5r-Ll-1va" firstAttribute="centerX" secondItem="RJn-GT-mV3" secondAttribute="centerX" id="lrC-aT-61w"/>
+                            <constraint firstItem="pud-up-avw" firstAttribute="centerX" secondItem="RJn-GT-mV3" secondAttribute="centerX" id="qGf-Hp-Atb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p3d-fb-7MP"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycj-Gn-oVW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1970" y="27"/>
+        </scene>
+        <!--GCDVC-->
+        <scene sceneID="est-WF-vyn">
+            <objects>
+                <viewController storyboardIdentifier="GCDVC" title="GCDVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jzR-eW-2e9" customClass="GCDVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5vZ-qu-gpK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jx6-7O-KSg">
+                                <rect key="frame" x="153" y="300.5" width="69" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="VG4-5P-euL"/>
+                                </constraints>
+                                <state key="normal" title="NSThread"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLj-YJ-oc4">
+                                <rect key="frame" x="154.5" y="204.5" width="66" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="jo1-e5-NXh"/>
+                                    <constraint firstAttribute="height" constant="66" id="u4s-OJ-Ca4"/>
+                                </constraints>
+                                <state key="normal" title="GCD"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUW-WH-CJx">
+                                <rect key="frame" x="143" y="396.5" width="89" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="66" id="Lc8-HG-6jJ"/>
+                                </constraints>
+                                <state key="normal" title="NSOperation"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jx6-7O-KSg" firstAttribute="centerY" secondItem="5vZ-qu-gpK" secondAttribute="centerY" id="D4I-NI-3fQ"/>
+                            <constraint firstItem="Jx6-7O-KSg" firstAttribute="centerX" secondItem="5vZ-qu-gpK" secondAttribute="centerX" id="WWP-FL-vBE"/>
+                            <constraint firstItem="XUW-WH-CJx" firstAttribute="top" secondItem="Jx6-7O-KSg" secondAttribute="bottom" constant="30" id="hsh-M5-307"/>
+                            <constraint firstItem="Jx6-7O-KSg" firstAttribute="top" secondItem="cLj-YJ-oc4" secondAttribute="bottom" constant="30" id="pPP-zS-IXX"/>
+                            <constraint firstItem="cLj-YJ-oc4" firstAttribute="centerX" secondItem="Jx6-7O-KSg" secondAttribute="centerX" id="xai-Sx-hjI"/>
+                            <constraint firstItem="XUW-WH-CJx" firstAttribute="centerX" secondItem="Jx6-7O-KSg" secondAttribute="centerX" id="zJk-pM-9jj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sl0-jh-UxB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z6y-9A-P4A" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314" y="27"/>
+        </scene>
+    </scenes>
+</document>
